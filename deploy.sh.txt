@@ -1,0 +1,43 @@
+#!/bin/bash
+set -e
+
+echo "🚀 Starting deployment..."
+
+sudo apt update && sudo apt upgrade -y
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs nginx
+sudo npm install -g pm2
+
+cd backend
+npm install
+pm2 start index.js --name email-detector
+pm2 save
+
+sudo tee /etc/nginx/sites-available/email-detector <<EOF
+server {
+    listen 80;
+    server_name yourdomain.com;
+
+    root /var/www/your-project/public;
+    index index.html;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+
+    location /api/ {
+        proxy_pass http://localhost:3000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade \$http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host \$host;
+        proxy_cache_bypass \$http_upgrade;
+    }
+}
+EOF
+
+sudo ln -s /etc/nginx/sites-available/email-detector /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl restart nginx
+
+echo "✅ Deployment complete!"

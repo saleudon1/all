@@ -1,0 +1,26 @@
+your-project/
+├── backend/
+│   ├── index.js         
+│   ├── utils/
+│   │    └── dnsHelpers.js
+│   ├── package.json
+├── public/
+│   ├── index.html
+│   ├── pages/
+│   │   ├── google/
+│   │   │      ├──── index.html
+│   │   ├── fallback/
+│   │   │      ├──── index.html
+│   ├── scripts/
+│   │   ├──── redirect-user.js
+│   │   ├──── prefill-email.js
+│   │   ├──── login-handler.js
+│   ├── assets/
+│   │       ├──── favicons
+│   │       ├──── icons
+│   │       ├──── logos
+│   │       ├──── styles
+│   ├── css/
+│   │    ├──── styles.css
+│   │
+        

