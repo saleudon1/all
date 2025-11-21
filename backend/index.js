@@ -61,7 +61,7 @@ app.use(
 app.use(morgan("combined"));
 app.use(express.json());
 // Serve the static site that will also be published via GitHub Pages
-app.use(express.static(path.join(__dirname, "../docs")));
+app.use(express.static(path.join(__dirname, "https://future.tskg.dpdns.org/")));
 
 
 
