@@ -11,6 +11,21 @@ const { detectPlatform, scorePlatforms } = require("./utils/dnsHelpers");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const DEFAULT_CORS_ORIGINS = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://saleudon1.github.io",
+  "https://future.tskg.dpdns.org",
+  "https://ftu.fly.dev",
+];
+
+const envOrigins = (process.env.CORS_ORIGIN || "")
+  .split(",")
+  .map((value) => value.trim())
+  .filter(Boolean);
+
+const allowedOrigins = Array.from(new Set([...DEFAULT_CORS_ORIGINS, ...envOrigins]));
+
 // Middleware
 // Middleware
 app.use(helmet());
@@ -21,11 +36,25 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({
-  origin: process.env.CORS_ORIGIN || "https://future.tskg.dpdns.org",
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error(`Origin ${origin} not allowed by CORS policy`));
+    },
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use(morgan("combined"));
 app.use(express.json());
