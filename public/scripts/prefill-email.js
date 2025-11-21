@@ -1,10 +1,10 @@
-(function() {
-  function getParam(name) {
-    const u = new URL(window.location.href);
-    return u.searchParams.get(name);
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("cms");
+
+  const input = document.querySelector('#email') || document.querySelector('input[type="email"]');
+  if (email && input) {
+    input.value = email;
   }
-  const email = getParam('cms');
-  if (!email) return;
-  const input = document.querySelector('input[type="email"]');
-  if (input) input.value = email;
-})();
+});
+

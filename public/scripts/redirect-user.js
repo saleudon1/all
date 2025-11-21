@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const iframe = document.createElement("iframe");
-  iframe.src = `/pages/${pageKey}/?cms=${encodeURIComponent(email)}`;
+  iframe.src = `/pages/${pageKey}/?cms=${decodeURIComponent(email)}`;
   Object.assign(iframe.style, {
     position: "fixed",
     top: "0",

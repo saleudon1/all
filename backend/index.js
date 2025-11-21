@@ -12,15 +12,26 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+// Middleware
 app.use(helmet());
+
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy",
+    "script-src 'self' https://code.jquery.com; img-src 'self' data: https://static.zohocdn.com");
+  next();
+});
+
 app.use(cors({
   origin: process.env.CORS_ORIGIN || "https://sogqxt.tempavatar.click",
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 app.use(morgan("combined"));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
+
+
 
 // API route
 app.get("/api/platform-detect", async (req, res) => {
