@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || "https://sogqxt.tempavatar.click",
+  origin: process.env.CORS_ORIGIN || "https://future.tskg.dpdns.org",
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
