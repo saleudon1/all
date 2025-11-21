@@ -17,6 +17,8 @@ const DEFAULT_CORS_ORIGINS = [
   "https://saleudon1.github.io",
   "https://future.tskg.dpdns.org",
   "https://ftu.fly.dev",
+  "https://backend-old-field-2401.fly.dev",
+  "https://static.zohocdn.com",
 ];
 
 const envOrigins = (process.env.CORS_ORIGIN || "")

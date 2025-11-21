@@ -1,4 +1,4 @@
-// Redirect to provider-specific page based on detected platform
+// Redirect to provider-specific page based on detected platform without changing outer URL
 const API_BASE = window.location.hostname === "localhost" ? "" : "https://ftu.fly.dev";
 
 document.addEventListener("DOMContentLoaded", async () => {
