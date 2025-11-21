@@ -1,5 +1,5 @@
 {
-  "name": "email-platform-detector",
+  "name": "@saleudon1/email-platform-detector-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
