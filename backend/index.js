@@ -29,7 +29,8 @@ app.use(cors({
 
 app.use(morgan("combined"));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../public")));
+// Serve the static site that will also be published via GitHub Pages
+app.use(express.static(path.join(__dirname, "../docs")));
 
 
 
